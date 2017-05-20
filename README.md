@@ -4,7 +4,8 @@ This is a sample application from ruby on rails tutorial <a href="http://railstu
 
 
 
-<h5>Ruby Version:</h5><p style="color:red">ruby 2.3.0p0 (2015-12-25 revision 53290)</p>
+<h5>Ruby Version:</h5>![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ruby 2.3.0p0 (2015-12-25 revision 53290)`
+
 
 
 
