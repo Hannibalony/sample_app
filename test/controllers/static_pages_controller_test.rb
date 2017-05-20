@@ -2,9 +2,6 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   
-  def setup
-    @base_title = "Ruby on Rails"
-  end
   
   test "should get root" do
     get '/'
@@ -12,30 +9,29 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
   
 
-  
   test "should get home" do
-    get static_pages_home_url     #get request for home url
+    get root_path     #get request for home url
     assert_response :success      #Make sure the request returns response 200
-    assert_select 'title', "Home | #{@base_title}" #Make sure the title of home page is select as 'Home'
+    assert_select 'title', "Ruby on Rails" #Make sure the title of home page is select as 'Home'
   end
 
   test "should get help" do
-    get static_pages_help_url
+    get help_path
     assert_response :success      
-    assert_select 'title', "Help | #{@base_title}" #Make sure the title of help page is select as 'Help'
+    assert_select 'title', "Help | Ruby on Rails" #Make sure the title of help page is select as 'Help'
   end
 
   
   test "should get about" do
-    get static_pages_about_url
+    get about_path
     assert_response :success
-    assert_select 'title', "About | #{@base_title}" #Make sure the title of about page is select as 'About'
+    assert_select 'title', "Ruby on Rails" #Make sure the title of about page is select as 'About'
   end
   
   test "should get contact" do
-    get static_pages_contact_url
+    get contact_path
     assert_response :success
-    assert_select 'title', "Contact | #{@base_title}"
+    assert_select 'title', "Ruby on Rails"
   end
   
 end
